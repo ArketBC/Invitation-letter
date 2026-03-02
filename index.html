@@ -152,6 +152,45 @@
             `;
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
+        <script>
+        document.getElementById('invitationForm').onsubmit = function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const expoChoice = formData.get('expo');
+            const dinerChoice = formData.get('diner');
+            const massageChoice = formData.get('massage') ? "Inclus" : "Non souhaité";
+            
+            const mainContent = document.getElementById('main-content');
+            mainContent.innerHTML = `
+                <div class="text-center py-10 animate-fade-in">
+                    <h2 class="text-5xl font-serif text-rose-900 mb-8">Merci, Monsieur Sanchez.</h2>
+                    <div class="divider"></div>
+                    
+                    <div class="bg-white border border-pink-100 p-8 max-w-lg mx-auto mb-10 shadow-sm rounded-sm">
+                        <h3 class="text-xl font-serif mb-6 text-gray-400 uppercase tracking-widest">Récapitulatif de notre soirée</h3>
+                        <div class="space-y-4 text-left border-l-2 border-pink-200 pl-6 mx-auto inline-block">
+                            <p><strong class="font-serif italic text-rose-800">Parcours :</strong> ${expoChoice}</p>
+                            <p><strong class="font-serif italic text-rose-800">Dîner :</strong> ${dinerChoice}</p>
+                            <p><strong class="font-serif italic text-rose-800">Massage :</strong> ${massageChoice}</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xl italic text-gray-700 leading-relaxed max-w-2xl mx-auto mb-10">
+                        "C’est une joie de savoir que notre soirée prend désormais une forme qui vous ressemble. <br>
+                        Je me réjouis déjà de ces instants partagés."
+                    </p>
+                    
+                    <p class="text-gray-500 italic mb-2">À très vite,</p>
+                    <p class="text-4xl font-serif text-rose-900 mb-16">Madame Bidule</p>
+                    
+                    <button onclick="window.print()" class="no-print btn-submit text-white px-8 py-3 rounded-full text-sm font-serif shadow hover:opacity-90">
+                        Imprimer ce récapitulatif
+                    </button>
+                </div>
+            `;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
     </script>
 </body>
 </html>
