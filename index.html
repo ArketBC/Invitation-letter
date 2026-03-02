@@ -20,14 +20,13 @@
         .link-discovery:hover { color: #7d4f50; }
         .animate-fade-in { animation: fadeIn 0.8s ease-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        @media print { .no-print { display: none; } body { background: white; } }
     </style>
 </head>
 <body class="bg-soft antialiased text-gray-800">
 
     <div id="main-content" class="max-w-4xl mx-auto px-6 py-16 md:py-24">
         
-        <header class="text-center mb-20 no-print">
+        <header class="text-center mb-20">
             <h2 class="italic text-2xl text-gray-500 mb-4">Barcelone, le 02 Mars 2026</h2>
             <h1 class="text-4xl md:text-6xl font-serif font-normal text-gray-900 mb-8">Cher Monsieur Sanchez,</h1>
             <p class="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto italic text-gray-700">
@@ -35,9 +34,9 @@
             </p>
         </header>
 
-        <div class="divider no-print"></div>
+        <div class="divider"></div>
 
-        <form id="invitationForm" class="no-print">
+        <form id="invitationForm">
             <section class="mb-20">
                 <div class="text-center mb-12">
                     <span class="uppercase tracking-widest text-sm text-pink-300 font-bold">Étape I</span>
@@ -49,6 +48,10 @@
                         <input type="radio" name="expo" value="Moco Museum" class="hidden peer" required>
                         <div class="card-content bg-white p-8 border rounded-sm shadow-sm h-full peer-checked:border-rose-800 peer-checked:bg-rose-50/30 transition-all">
                             <h3 class="text-xl font-serif mb-4 text-rose-800 italic">Option I : Moco Museum</h3>
+                            <ul class="space-y-4 text-gray-600 mb-6 text-sm">
+                                <li>• Expérience immersive (Studio Irma)</li>
+                                <li>• Banksy à Barcelone</li>
+                            </ul>
                             <div class="flex flex-col space-y-2 mb-4">
                                 <a href="https://www.mocomuseum.com/exhibitions/barcelona/digital-immersive-art-barcelona/" target="_blank" class="link-discovery">→ Découvrir l'exposition digitale</a>
                                 <a href="https://www.mocomuseum.com/exhibitions/barcelona/banksy-in-barcelona/" target="_blank" class="link-discovery">→ Découvrir Banksy</a>
@@ -59,4 +62,96 @@
 
                     <label class="block cursor-pointer">
                         <input type="radio" name="expo" value="MACBA" class="hidden peer">
-                        <div class="card-content bg-white p-8 border rounded-sm shadow-sm h-full peer-checked:border-rose-
+                        <div class="card-content bg-white p-8 border rounded-sm shadow-sm h-full peer-checked:border-rose-800 peer-checked:bg-rose-50/30 transition-all">
+                            <h3 class="text-xl font-serif mb-4 text-rose-800 italic">Option II : MACBA</h3>
+                            <ul class="space-y-4 text-gray-600 mb-6 text-sm">
+                                <li>• Prisioneros del amor</li>
+                                <li>• Proyectar un planeta negro</li>
+                            </ul>
+                            <div class="flex flex-col space-y-2 mb-4">
+                                <a href="https://www.macba.cat/es/exposiciones/basel-abbas-y-ruanne-abou-rahme/" target="_blank" class="link-discovery">→ Découvrir "Prisioneros"</a>
+                                <a href="https://www.macba.cat/es/exposiciones/proyectar-un-planeta-negro-el-arte-y-la-cultura-de-panafrica/" target="_blank" class="link-discovery">→ Découvrir Panáfrica</a>
+                            </div>
+                            <p class="text-xs italic border-t pt-4 text-gray-500">"Exploration profonde de la mémoire et de la culture."</p>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section class="mb-20">
+                <div class="text-center mb-12">
+                    <span class="uppercase tracking-widest text-sm text-pink-300 font-bold">Étape II</span>
+                    <h2 class="text-3xl font-serif mt-2">Une pause culinaire raffinée</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <label class="block cursor-pointer">
+                        <input type="radio" name="diner" value="El Salon" class="hidden peer" required>
+                        <div class="card-content bg-white p-8 border rounded-sm shadow-sm h-full peer-checked:border-rose-800 peer-checked:bg-rose-50/30 transition-all text-center">
+                            <h3 class="text-xl font-serif mb-4 text-rose-800 italic underline decoration-pink-100 underline-offset-8">Option I : El Salón</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                Un bistro du Barrio Gótico chaleureux, réputé pour sa célèbre tarte Tatin maison.
+                            </p>
+                            <a href="https://www.elsalonrestaurant.com/" target="_blank" class="link-discovery block mb-4">→ Consulter le site web</a>
+                            <p class="text-xs italic border-t pt-4 text-gray-500">"Depuis 1995, une atmosphère comme à la maison."</p>
+                        </div>
+                    </label>
+
+                    <label class="block cursor-pointer">
+                        <input type="radio" name="diner" value="Arcano" class="hidden peer">
+                        <div class="card-content bg-white p-8 border rounded-sm shadow-sm h-full peer-checked:border-rose-800 peer-checked:bg-rose-50/30 transition-all text-center">
+                            <h3 class="text-xl font-serif mb-4 text-rose-800 italic underline decoration-pink-100 underline-offset-8">Option II : Arcano</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                                Ambiance romantique sous voûtes historiques, créativité méditerranéenne.
+                            </p>
+                            <a href="https://www.arcanobarcelona.com/" target="_blank" class="link-discovery block mb-4">→ Consulter le site web</a>
+                            <p class="text-xs italic border-t pt-4 text-gray-500">"Une expérience intime à la lueur des bougies."</p>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section class="text-center bg-white py-12 px-6 border-y border-pink-50 mb-16">
+                <span class="uppercase tracking-widest text-sm text-pink-300 font-bold">Étape III</span>
+                <h2 class="text-3xl font-serif mt-2 mb-6 text-gray-900 font-normal">Une touche douce et apaisante</h2>
+                <div class="flex justify-center items-center space-x-3 mb-4">
+                    <input type="checkbox" id="massage" name="massage" checked class="w-5 h-5 accent-rose-800">
+                    <label for="massage" class="text-gray-700 italic">Oui, je souhaite ce moment de détente</label>
+                </div>
+            </section>
+
+            <div class="text-center">
+                <button type="submit" class="btn-submit text-white px-12 py-4 rounded-full text-lg font-serif shadow-lg">
+                    Confirmer mes choix
+                </button>
+            </div>
+        </form>
+
+        <footer class="mt-24 text-center">
+            <div class="divider"></div>
+            <p class="text-gray-500 mb-2 italic">Avec toute mon affection,</p>
+            <h3 class="text-4xl font-serif italic text-rose-900">Madame Bidule</h3>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('invitationForm').onsubmit = function(e) {
+            e.preventDefault();
+            const mainContent = document.getElementById('main-content');
+            mainContent.innerHTML = `
+                <div class="text-center py-20 animate-fade-in">
+                    <h2 class="text-5xl font-serif text-rose-900 mb-8">Merci, Monsieur Sanchez.</h2>
+                    <div class="divider"></div>
+                    <p class="text-2xl italic text-gray-700 leading-relaxed max-w-2xl mx-auto mb-10">
+                        "C’est une joie de savoir que notre soirée prend désormais une forme qui vous ressemble. 
+                        Chaque détail est noté, et je me réjouis déjà de ces instants que nous allons partager ensemble."
+                    </p>
+                    <p class="text-gray-500 italic mb-2">À très vite,</p>
+                    <p class="text-4xl font-serif text-rose-900">Madame Bidule</p>
+                </div>
+            `;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>
