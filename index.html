@@ -91,6 +91,28 @@
             <p class="text-3xl font-serif mt-2">Votre Nom</p>
         </footer>
     </div>
-
+<script>
+  const form = document.querySelector('form');
+  form.onsubmit = function(e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+    
+    // Remplace le contenu du formulaire par le message de remerciement
+    form.innerHTML = `
+      <div class="text-center py-20 animate-fade-in">
+        <h2 class="text-4xl font-serif text-rose-900 mb-6">Merci, Monsieur Le Roux.</h2>
+        <div class="divider"></div>
+        <p class="text-xl italic text-gray-700 leading-relaxed mb-8">
+          "C’est une joie de savoir que notre soirée prend désormais une forme qui vous ressemble. <br>
+          Chaque détail est noté, et je me réjouis déjà de ces instants que nous allons partager."
+        </p>
+        <p class="text-gray-500 italic">À très vite,</p>
+        <p class="text-3xl font-serif mt-2">Madame Curial</p>
+      </div>
+    `;
+    
+    // Ici, vous pourriez ajouter l'envoi réel des données si nécessaire
+    console.log("Choix confirmés !"); 
+  };
+</script>
 </body>
 </html>
