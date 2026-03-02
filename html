@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Soirée à la Carte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Lora', serif; background-color: #fdfbfb; color: #444; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .option-card { transition: all 0.3s ease; cursor: pointer; border: 1px solid #f2e1e1; }
+        .option-card:hover { border-color: #dab0a7; background-color: #fffafb; }
+        input[type="radio"]:checked + .option-content { border-color: #7d4f50; background-color: #fff5f5; }
+        .btn-submit { background-color: #7d4f50; transition: background 0.3s; }
+        .btn-submit:hover { background-color: #a47778; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="max-w-3xl mx-auto px-6 py-16">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl mb-6">Cher Son Prénom,</h1>
+            <p class="text-lg italic leading-relaxed text-gray-700">
+                Composez notre expérience selon vos goûts. Voici ma sélection à la carte pour notre soirée :
+            </p>
+        </header>
+
+        <form action="#" method="POST" class="space-y-12">
+            
+            <section>
+                <h2 class="text-2xl font-serif text-center mb-8 border-b pb-4 border-pink-100">I. Votre choix de parcours artistique [cite: 5]</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <label class="relative">
+                        <input type="radio" name="exposition" value="moco" class="hidden peer" required>
+                        <div class="option-card p-6 rounded-sm peer-checked:border-rose-900 peer-checked:bg-rose-50 h-full">
+                            <h3 class="font-bold mb-2">Option I : Moco Museum [cite: 8]</h3>
+                            <p class="text-sm text-gray-600">Immersion digitale et street art avec Banksy[cite: 6, 7].</p>
+                        </div>
+                    </label>
+                    <label class="relative">
+                        <input type="radio" name="exposition" value="macba" class="hidden peer">
+                        <div class="option-card p-6 rounded-sm peer-checked:border-rose-900 peer-checked:bg-rose-50 h-full">
+                            <h3 class="font-bold mb-2">Option II : MACBA [cite: 13]</h3>
+                            <p class="text-sm text-gray-600">Mémoire politique et culture panafricaine[cite: 10, 12, 14].</p>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-serif text-center mb-8 border-b pb-4 border-pink-100">II. Une pause culinaire raffinée [cite: 15]</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <label class="relative">
+                        <input type="radio" name="diner" value="salon" class="hidden peer" required>
+                        <div class="option-card p-6 rounded-sm peer-checked:border-rose-900 peer-checked:bg-rose-50 h-full">
+                            <h3 class="font-bold mb-2">El Salón [cite: 16]</h3>
+                            <p class="text-sm text-gray-600">Ambiance chaleureuse et Tatin maison[cite: 17].</p>
+                        </div>
+                    </label>
+                    <label class="relative">
+                        <input type="radio" name="diner" value="arcano" class="hidden peer">
+                        <div class="option-card p-6 rounded-sm peer-checked:border-rose-900 peer-checked:bg-rose-50 h-full">
+                            <h3 class="font-bold mb-2">Arcano Restaurante [cite: 18]</h3>
+                            <p class="text-sm text-gray-600">Voûtes historiques et lueur des bougies[cite: 19].</p>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <section class="text-center">
+                <h2 class="text-2xl font-serif mb-6 border-b pb-4 border-pink-100">III. Finale apaisante [cite: 20]</h2>
+                <div class="flex justify-center items-center space-x-4">
+                    <input type="checkbox" id="massage" name="massage" checked class="w-5 h-5 accent-rose-900">
+                    <label for="massage" class="text-lg italic">Massage relaxant pour prolonger le plaisir [cite: 21]</label>
+                </div>
+            </section>
+
+            <div class="text-center pt-10">
+                <button type="submit" class="btn-submit text-white px-10 py-4 rounded-full text-lg font-serif shadow-lg">
+                    Confirmer mes choix
+                </button>
+                <p class="mt-8 italic text-gray-500">
+                    J’ai hâte de partager l’expérience que vous choisirez[cite: 23].
+                </p>
+            </div>
+        </form>
+
+        <footer class="mt-20 text-center border-t pt-10 border-pink-100">
+            <p class="text-gray-500 italic">Avec toute mon affection,</p>
+            <p class="text-3xl font-serif mt-2">Votre Nom</p>
+        </footer>
+    </div>
+
+</body>
+</html>
