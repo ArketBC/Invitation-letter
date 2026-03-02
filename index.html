@@ -3,94 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votre Soirée à la Carte</title>
+    <title>Une Soirée pour Nous</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Lora', serif; background-color: #fdfbfb; color: #444; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .option-card { transition: all 0.3s ease; cursor: pointer; border: 1px solid #f2e1e1; }
-        .option-card:hover { border-color: #dab0a7; background-color: #fffafb; }
-        input[type="radio"]:checked + .option-content { border-color: #7d4f50; background-color: #fff5f5; }
-        .btn-submit { background-color: #7d4f50; transition: background 0.3s; }
-        .btn-submit:hover { background-color: #a47778; }
+        body { font-family: 'Lora', serif; background-color: #fdfbfb; color: #333; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        .bg-soft { background: linear-gradient(135deg, #fff5f5 0%, #fdfbfb 100%); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; border-color: #e2b6b1; }
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, #e2b6b1, transparent); width: 60%; margin: 2rem auto; }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-soft antialiased text-gray-800">
 
-    <div class="max-w-3xl mx-auto px-6 py-16">
-        <header class="text-center mb-16">
-            <h1 class="text-4xl md:text-5xl mb-6">Cher Monsieur Sanchez,</h1>
-            <p class="text-lg italic leading-relaxed text-gray-700">
-                Composez notre expérience selon vos goûts. Voici ma sélection à la carte pour notre soirée :
+    <div class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        
+        <header class="text-center mb-20">
+            <h2 class="italic text-2xl text-gray-500 mb-4">Barcelone, le 02 Mars 2026</h2>
+            <h1 class="text-4xl md:text-6xl font-serif font-normal text-gray-900 mb-8">Cher Son Prénom,</h1>
+            <p class="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto italic text-gray-700">
+                "J’aurais le plaisir de vous inviter à une soirée soigneusement pensée pour nous — conçue non pas comme un programme fixe, mais comme une expérience que vous pourrez composer selon vos goûts." 
             </p>
         </header>
 
-        <form action="#" method="POST" class="space-y-12">
-            
-            <section>
-                <h2 class="text-2xl font-serif text-center mb-8 border-b pb-4 border-pink-100">I. Votre choix de parcours artistique [cite: 5]</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <label class="relative">
-                        <input type="radio" name="exposition" value="moco" class="hidden peer" required>
-                        <div class="option-card p-6 rounded-sm peer-checked:border-rose-900 peer-checked:bg-rose-50 h-full">
-                            <h3 class="font-bold mb-2">Option I : Moco Museum [cite: 8]</h3>
-                            <p class="text-sm text-gray-600">Immersion digitale et street art avec Banksy[cite: 6, 7].</p>
-                        </div>
-                    </label>
-                    <label class="relative">
-                        <input type="radio" name="exposition" value="macba" class="hidden peer">
-                        <div class="option-card p-6 rounded-sm peer-checked:border-rose-900 peer-checked:bg-rose-50 h-full">
-                            <h3 class="font-bold mb-2">Option II : MACBA [cite: 13]</h3>
-                            <p class="text-sm text-gray-600">Mémoire politique et culture panafricaine[cite: 10, 12, 14].</p>
-                        </div>
-                    </label>
-                </div>
-            </section>
+        <div class="divider"></div>
 
-            <section>
-                <h2 class="text-2xl font-serif text-center mb-8 border-b pb-4 border-pink-100">II. Une pause culinaire raffinée [cite: 15]</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <label class="relative">
-                        <input type="radio" name="diner" value="salon" class="hidden peer" required>
-                        <div class="option-card p-6 rounded-sm peer-checked:border-rose-900 peer-checked:bg-rose-50 h-full">
-                            <h3 class="font-bold mb-2">El Salón [cite: 16]</h3>
-                            <p class="text-sm text-gray-600">Ambiance chaleureuse et Tatin maison[cite: 17].</p>
-                        </div>
-                    </label>
-                    <label class="relative">
-                        <input type="radio" name="diner" value="arcano" class="hidden peer">
-                        <div class="option-card p-6 rounded-sm peer-checked:border-rose-900 peer-checked:bg-rose-50 h-full">
-                            <h3 class="font-bold mb-2">Arcano Restaurante [cite: 18]</h3>
-                            <p class="text-sm text-gray-600">Voûtes historiques et lueur des bougies[cite: 19].</p>
-                        </div>
-                    </label>
-                </div>
-            </section>
-
-            <section class="text-center">
-                <h2 class="text-2xl font-serif mb-6 border-b pb-4 border-pink-100">III. Finale apaisante [cite: 20]</h2>
-                <div class="flex justify-center items-center space-x-4">
-                    <input type="checkbox" id="massage" name="massage" checked class="w-5 h-5 accent-rose-900">
-                    <label for="massage" class="text-lg italic">Massage relaxant pour prolonger le plaisir [cite: 21]</label>
-                </div>
-            </section>
-
-            <div class="text-center pt-10">
-                <button type="submit" class="btn-submit text-white px-10 py-4 rounded-full text-lg font-serif shadow-lg">
-                    Confirmer mes choix
-                </button>
-                <p class="mt-8 italic text-gray-500">
-                    J’ai hâte de partager l’expérience que vous choisirez[cite: 23].
-                </p>
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <span class="uppercase tracking-widest text-sm text-pink-300 font-bold">Étape I</span>
+                <h2 class="text-3xl font-serif mt-2">Votre choix de parcours artistique [cite: 5]</h2>
             </div>
-        </form>
 
-        <footer class="mt-20 text-center border-t pt-10 border-pink-100">
-            <p class="text-gray-500 italic">Avec toute mon affection,</p>
-            <p class="text-3xl font-serif mt-2"> Madame Bidule</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 border border-gray-100 rounded-sm shadow-sm card-hover">
+                    <h3 class="text-xl font-serif mb-4 text-rose-800 italic">Option I : Moco Museum [cite: 8]</h3>
+                    <ul class="space-y-4 text-gray-600 mb-6">
+                        <li>• <strong>Expérience immersive</strong> par Studio Irma | Les Fantômes | Six N. Five [cite: 6]</li>
+                        <li>• <strong>Banksy à Barcelone</strong> : nouveaux travaux ajoutés [cite: 7]</li>
+                    </ul>
+                    <p class="text-sm italic border-t pt-4 text-gray-500">
+                        "Une rencontre contemporaine et visuellement frappante, mêlant immersion digitale et street art provocateur." [cite: 9]
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 border border-gray-100 rounded-sm shadow-sm card-hover">
+                    <h3 class="text-xl font-serif mb-4 text-rose-800 italic">Option II : MACBA [cite: 13]</h3>
+                    <ul class="space-y-4 text-gray-600 mb-6">
+                        <li>• <strong>Prisioneros del amor</strong> - Basel Abbas & Ruanne Abou-Rahme [cite: 10]</li>
+                        <li>• <strong>Proyectar un planeta negro</strong> : L'art et la culture de Panáfrica [cite: 12]</li>
+                    </ul>
+                    <p class="text-sm italic border-t pt-4 text-gray-500">
+                        "Une exploration profonde de la mémoire politique et de l'expression culturelle panafricaine." [cite: 14]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <span class="uppercase tracking-widest text-sm text-pink-300 font-bold">Étape II</span>
+                <h2 class="text-3xl font-serif mt-2">Une pause culinaire raffinée [cite: 15]</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="text-center p-6">
+                    <h3 class="text-xl font-serif mb-2 underline decoration-pink-100 underline-offset-8 italic">El Salón [cite: 16]</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Un bistro du Barrio Gótico chaleureux et décontracté, réputé pour sa célèbre tarte Tatin maison. [cite: 17]
+                    </p>
+                </div>
+                <div class="text-center p-6">
+                    <h3 class="text-xl font-serif mb-2 underline decoration-pink-100 underline-offset-8 italic">Arcano Restaurante [cite: 18]</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Ambiance romantique sous des voûtes historiques, où saveurs méditerranéennes et créativité se rencontrent. [cite: 19]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center bg-white py-12 px-6 border-y border-pink-50">
+            <span class="uppercase tracking-widest text-sm text-pink-300 font-bold">Étape III</span>
+            <h2 class="text-3xl font-serif mt-2 mb-6 text-gray-900 font-normal">Une touche douce et apaisante [cite: 20]</h2>
+            <p class="max-w-xl mx-auto text-gray-700 leading-relaxed">
+                "Pour conclure la soirée, je propose un massage relaxant — un moment de détente pour prolonger le plaisir dans le calme et la sérénité." [cite: 21]
+            </p>
+        </section>
+
+        <footer class="mt-24 text-center">
+            <p class="text-lg text-gray-800 mb-12 leading-relaxed">
+                "J'espère que vous prendrez plaisir à choisir la combinaison qui vous inspire le plus. J'ai hâte de partager l'expérience que vous choisirez." [cite: 22, 23]
+            </p>
+            <div class="divider"></div>
+            <p class="text-gray-500 mb-2 italic">Avec toute mon affection,</p>
+            <h3 class="text-4xl font-serif italic text-rose-900">Madame Curial</h3>
         </footer>
-    </div>
+
 <script>
   const form = document.querySelector('form');
   form.onsubmit = function(e) {
